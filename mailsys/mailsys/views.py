@@ -1,11 +1,13 @@
 # Custom
 
 from django.http import HttpResponse
-from django.shortcuts import shortcuts
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("HOME PAGE")
+    params = {"name":"Abhinav","loc":"Rishikesh"}
+    return render (request, 'index.html',params)
+    # return HttpResponse("Index Page")
 
 def removepunc(request):
     return HttpResponse("Remove Punc")
