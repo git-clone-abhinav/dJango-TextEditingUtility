@@ -10,6 +10,8 @@ def index(request):
     # return HttpResponse("Index Page")
 
 def removepunc(request):
+    djtext = request.GET.get('text', 'default')
+    print('djtext')
     return HttpResponse("Remove Punc")
 
 def capfirst(request):
